@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {FiMenu, Fix} from "react-icons/fi";
+import {FiMenu, FiX} from "react-icons/fi";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -53,7 +53,7 @@ function Navbar() {
         </ul>
         <div className="md:hidden">
             {isOpen ? (
-                <Fix  className="text-3xl cursor-pointer"
+                <FiX  className="text-3xl cursor-pointer"
                 onClick={()=> setIsOpen(false)}/>
             ) : (
                 <FiMenu className="text-3xl cursor-pointer" 
