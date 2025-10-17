@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <nav className="fixed w-full bg-white shadow-md z-50">
       <div className="flex justify-between items-center py-6 md:px-12 py-4">
-        <h1 className="text-2xl font-bold text-blue-600">MyPortfolio</h1>
+        <h1 className="text-2xl font-bold text-blue-600 p-4">My Portfolio</h1>
         <ul className="hidden md:flex space-x-8 font-medium">
           {navItems.map((item) => (
             <li key={item.id}>
