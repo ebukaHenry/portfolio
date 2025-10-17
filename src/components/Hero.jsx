@@ -1,7 +1,7 @@
 import profilePic from "../assets/profile.jpg.jpg";
 export default function Hero() {
   return (
-    <section id="home" className="flex items-center justify-center h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4">
+    <section id="home" className="flex flex-col md:flex-row items-center justify-center h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4">
         <img
             src={profilePic}
             alt="Ebuka Henry"
