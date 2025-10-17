@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import {FiMenu, Fix} from "react-icons/fi";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +33,9 @@ function Navbar() {
 
   return (
     <nav className="fixed w-full bg-white shadow-md z-50">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+      <div className="flex justify-between items-center py-6 md:px-12 py-4">
         <h1 className="text-2xl font-bold text-blue-600">MyPortfolio</h1>
-        <ul className="flex space-x-8">
+        <ul className="hidden md:flex space-x-8 font-medium">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
@@ -49,7 +51,23 @@ function Navbar() {
             </li>
           ))}
         </ul>
+        <div className="md:hidden">
+            {isOpen ? (
+                <Fix  className="text-3xl cursor-pointer"
+                onClick={()=> setIsOpen(false)}/>
+            ) : (
+                <FiMenu className="text-3xl cursor-pointer" 
+                onClick={()=> setIsOpen(true)}/>
+            )}
+        </div>
       </div>
+      {isOpen && (
+        <ul className="flex flex-col items-center bg-white tex-gray-800 font-medium space-y-6 py-8 md:hidden shadow-md">
+            <li><a href="#about" onClick={()=> setIsOpen(false)}>About</a></li>
+            <li><a href="#projects" onClick={()=> setIsOpen(false)}>Projects</a></li>
+            <li><a href="#contact" onClick={()=> setIsOpen(false)}>Contact</a></li>
+        </ul>
+      )}
     </nav>
   );
 }
