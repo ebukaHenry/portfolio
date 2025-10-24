@@ -9,7 +9,7 @@ function Projects() {
       title: "Online Quiz App",
       description: "Full-stack platform featuring JWT-authenticated roles, integrated Twilio/SendGrid APIs for instant result delivery via SMS and Email, and utilized React for a resilient, time-aware test interface.",
       image: "/online-quiz.png",
-      demo: "https://https://online-test-rosy.vercel.app/",
+      demo: "https://online-test-rosy.vercel.app/",
       github: "https://github.com/ebukaHenry/online-test",
     },
      {
