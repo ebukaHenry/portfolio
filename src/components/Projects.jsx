@@ -5,16 +5,23 @@ import eCommerce from "../assets/e-commerce";
 
 function Projects() {
   const projects = [
+    {
+      title: "Online Quiz App",
+      description: "Full-stack platform featuring JWT-authenticated roles, integrated Twilio/SendGrid APIs for instant result delivery via SMS and Email, and utilized React for a resilient, time-aware test interface.",
+      image: "/online-quiz.png",
+      demo: "https://https://online-test-rosy.vercel.app/",
+      github: "https://github.com/ebukaHenry/online-test",
+    },
      {
       title: "Hotel Inventory App",
-      description: "A full-stack e-commerce store built with React, Node.js, and PostgreSQL.",
+      description: "I built a full-stack Hotel Property Management System using React and Node.js that centralizes guest and room management. It features real-time dynamic room status and a supply inventory alert system designed to prevent overbooking.",
       image: "/hotel-inventory.png",
       demo: "https://maradis-inventory-client.vercel.app/",
       github: "https://github.com/ebukaHenry/maradis-inventory",
     },
     {
       title: "Weather App",
-      description: "A React app that fetches word definitions from a public API and displays them cleanly.",
+      description: "Developed a single-page application (SPA) for comprehensive weather visualization, built with ReactJS and leveraging a third-party weather API. The core focus was on optimizing data fetching.",
       image: "/weather-app.png",
       demo: "https://timer-app-tau.vercel.app",
       github: "https://github.com/ebukaHenry/timer-app",
@@ -35,7 +42,7 @@ function Projects() {
           My Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
